@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { Routes, Route, Outlet } from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation";
+import Home from "./routes/Home";
+import PostDetail from "./routes/PostDetail";
+import AllPost from "./routes/AllPost";
+import VinpearlDetail from "./routes/VinpearlDetail";
+import Culinary from "./routes/Culinary";
+import Resort from "./routes/Resort";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="post" element={<Outlet />}>
+          <Route path="all" element={<AllPost />} />
+          <Route path="detail/:pid" element={<PostDetail />} />
+        </Route>
+        <Route path="vinpearl" element={<Outlet />}>
+          <Route path=":vid" element={<VinpearlDetail />} />
+        </Route>
+        <Route path="culinary" element={<Outlet />}>
+          <Route path=":cid" element={<Culinary />} />
+        </Route>
+        <Route path="resort" element={<Outlet />}>
+          <Route path=":rid" element={<Resort />} />
+        </Route>
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
