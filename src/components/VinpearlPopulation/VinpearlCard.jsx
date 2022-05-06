@@ -9,7 +9,7 @@ const VinpearlCard = ({ vinpearlData }) => {
         alt={`${title}`}
         className="w-full h-full object-cover rounded"
       />
-      <div className="absolute bottom-10 left-5  text-white text-center z-40">
+      <div className="absolute bottom-10  w-[90%] left-[5%] text-white text-center z-40">
         <div className="text-xl font-semibold">{place}</div>
         <div className="font-medium mt-4">{description}</div>
       </div>
