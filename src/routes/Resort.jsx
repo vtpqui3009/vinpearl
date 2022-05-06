@@ -33,7 +33,7 @@ const Resort = () => {
                 alt={`${resort.title}`}
                 className="w-full h-full object-cover relative"
               />
-              <div className="absolute top-1/2  w-4/5 left-[10%] translate-x--1/2 translate-y--1/2 text-white text-center z-50">
+              <div className="absolute top-1/2  w-4/5 left-[10%] translate-x--1/2 translate-y--1/2 text-white text-center z-40">
                 <p className="text-7xl mb-4 dancing-font">{resort.title}</p>
                 <p className="text-lg">{resort.description}</p>
               </div>

@@ -131,7 +131,7 @@ const RESORT_DATA = [
         phone: "(+84) 236 364 2888",
       },
     ],
-    slug: "nha-trang",
+    slug: "hoi-an",
   },
 ];
 export default RESORT_DATA;

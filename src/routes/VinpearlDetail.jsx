@@ -30,13 +30,12 @@ const VinpearlDetail = () => {
                   </Link>
                 </div>
               </div>
-              {/* </div> */}
               <img
                 src={vinpearl.bannerUrl}
                 alt={`${vinpearl.title}`}
                 className="w-full h-full object-cover relative"
               />
-              <div className="absolute top-1/2 left-1/4 translate-x--1/2 translate-y--1/2 text-white text-center z-50">
+              <div className="absolute top-1/2 left-1/4 translate-x--1/2 translate-y--1/2 text-white text-center z-40">
                 <p className="text-7xl mb-4 dancing-font">{vinpearl.title}</p>
                 <p className="text-lg">{vinpearl.description}</p>
               </div>
